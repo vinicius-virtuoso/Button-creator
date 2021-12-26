@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  background: rgb(24, 24, 24);
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 2rem;
+  animation: animeText 4s ease alternate infinite;
+}
+label {
+  display: block;
+  margin-bottom: .5rem;
+  margin-top: 1rem;
+}
+input {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.button-creator {
+  display: grid;
+  gap: 30px;
+  padding: 30px;
+  grid-template-columns: 200px 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  position: relative;
+}
+.button-creator::before{
+  content: '';
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  background:linear-gradient(45deg, #e2a808 45%, #0fcc7d 55%);
+  position: absolute;
+  z-index: -1;
+  border-radius: 4px;
+  animation: animeBg 3s linear infinite;
+}
+@keyframes animeText {
+  0% {
+    background:linear-gradient(0deg, #e2a808 45%, #0fcc7d 55%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background:linear-gradient(90deg, #e2a808 45%, #0fcc7d 55%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background:linear-gradient(180deg, #e2a808 45%, #0fcc7d 55%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background:linear-gradient(270deg, #e2a808 45%, #0fcc7d 55%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background:linear-gradient(360deg, #e2a808 45%, #0fcc7d 55%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes animeBg {
+  0% {
+    background:linear-gradient(0deg, #e2a808 45%, #0fcc7d 55%);
+  }
+  100% {
+    background:linear-gradient(180deg, #e2a808 45%, #0fcc7d 55%);
+  }
+}
+
+.controles {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .875rem;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.css {
+  color: #333;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column  ;
+}
+.css span {
+  display: block;
+  margin-bottom: .5rem;
+}
